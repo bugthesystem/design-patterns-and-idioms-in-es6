@@ -1,0 +1,35 @@
+{
+  "name": "atscript-playground",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A repo to play with AtScript.",
+  "homepage": "https://github.com/vojtajina/atscript-playground",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vojtajina/atscript-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vojtajina/atscript-playground/issues"
+  },
+  "dependencies": {
+    "traceur": "^0.0.72",
+    "requirejs": "^2.1.15"
+  },
+  "devDependencies": {
+    "assert": "angular/assert#dist",
+    "gulp": "^3.8.9",
+    "gulp-connect": "^2.0.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-traceur": "vojtajina/gulp-traceur#fix-sourcemaps",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.2.2",
+    "karma-requirejs": "^0.2.2",
+    "karma-traceur-preprocessor": "^0.4.0"
+  },
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "author": "Vojta Jína <vojta.jina@gmail.com>",
+  "license": "Apache-2.0"
+}
