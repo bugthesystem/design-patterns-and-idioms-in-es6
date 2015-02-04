@@ -1,5 +1,5 @@
-# design-patterns-in-atscript
-Design pattern implementations in AtScript
+# Design Patterns and Idioms in AtScript
+A collection of design patterns and idioms in AtScript
 
 **Boilerplate forked from  [angular/atscript-playground](https://github.com/angular/atscript-playground)**
 
@@ -22,6 +22,41 @@ npm install -g karma-cli gulp
 gulp build serve watch
 ```
 Open a browser and look in the console log to see the result.
+
+Current Patterns
+======================
+
+| Pattern | Description |
+|:-------:| ----------- |
+| [abstract_factory](src/abstract_factory/abstractFactory.ats) | use a generic function with specific factories |
+| [adapter](src/adapter/adapter.ats) | adapt one interface to another using a whitelist |
+| 3-tier | data<->business logic<->presentation separation (strict relationships) |
+| borg | a singleton with shared-state among instances |
+| bridge | a client-provider middleman to soften interface changes |
+| builder | call many little discrete methods rather than having a huge number of constructor parameters |
+| catalog | general methods will call different specialized methods based on construction parameter |
+| chain | apply a chain of successive handlers to try and process the data |
+| command | bundle a command and arguments to call later |
+| composite | encapsulate and provide access to a number of different objects |
+| decorator | wrap functionality with other functionality in order to affect outputs |
+| facade | use one class as an API to a number of others |
+| factory_method | delegate a specialized function/method to create instances |
+| flyweight | transparently reuse existing instances of objects with similar/identical state |
+| graph_search | (graphing algorithms, not design patterns) |
+| mediator | an object that knows how to connect other objects and act as a proxy |
+| memento | generate an opaque token that can be used to go back to a previous state |
+| mvc | model<->view<->controller (non-strict relationships) |
+| observer | provide a callback for notification of events/changes to data |
+| pool | preinstantiate and maintain a group of instances of the same type |
+| prototype | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
+| proxy | an object funnels operations to something else |
+| publish_subscribe | a source syndicates events/data to 0+ registered listeners |
+| state | logic is org'd into a discrete number of potential states and the next state that can be transitioned to |
+| strategy | selectable operations over the same data |
+| template | an object imposes a structure but takes pluggable components |
+| visitor| invoke a callback for all items of a collection |
+| chaining_method | continue callback next object method |
+
 
 ### What are all the pieces involved?
 
