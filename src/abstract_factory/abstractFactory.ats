@@ -1,18 +1,28 @@
-export class PetShop {
-    petFactory: AnimalFactory;
 
-    constructor(animalFactory: AnimalFactory) {
-        this.petFactory = animalFactory;
+import {Logger} from '../logger';
+
+export class PetShop {
+
+   constructor(petFactory:AbstractFactory) {
+        this.petFactory = petFactory;
+        this.logger= new Logger();
     }
-    showPet(): void {
-        pet = this.petFactory.getPet()
-        console.log("We have a lovely " + pet.toStr())
-        console.log("It says " + pet.speak())
-        console.log("We also have " + this.petFactory.getFood())
+
+    showPet() {
+        var pet = this.petFactory.getPet();
+        this.logger.log("We have a lovely " + pet.toStr());
+        this.logger.log("It says " + pet.speak());
+        this.logger.log("We also have " + this.petFactory.getFood());
     }
 }
 /* Stuff that our factory makes */
-export class Dog {
+
+export class Animal{
+    speak(): string {}
+    toStr(): string {}
+}
+
+export class Dog extends Animal{
     speak(): string {
         return "woof";
     }
@@ -22,20 +32,15 @@ export class Dog {
     }
 }
 
-export class Cat {
-    speak(): string {
-        return "meow";
-    }
+/* Factory classes */
 
-    toStr(): string {
-        return "Cat";
-    }
+export class AbstractFactory {
+    getPet(): Animal {}
+    getFood(): string {}
 }
 
-
-/* Factory classes */
-export class DogFactory {
-    def gePet(): any {
+export class DogFactory extends AbstractFactory {
+    getPet(): Animal {
         return new Dog();
     }
     getFood(): string {
@@ -43,8 +48,8 @@ export class DogFactory {
     }
 }
 
-export class CatFactory {
-    def gePet(): any {
+export class CatFactory extends AbstractFactory {
+    getPet(): Animal {
         return new Cat();
     }
     getFood(): string {

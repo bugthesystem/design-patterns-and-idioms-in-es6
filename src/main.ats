@@ -1,5 +1,1 @@
-import {PetShop} from './abstract_factory/abstractFactory';
-
-var petShop = new PetShop(/*TODO*/);
-
-//TODO: 
+//TODO:
