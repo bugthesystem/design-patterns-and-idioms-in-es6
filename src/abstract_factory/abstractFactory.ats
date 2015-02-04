@@ -1,11 +1,9 @@
-
 import {Logger} from '../logger';
 
 export class PetShop {
-
-   constructor(petFactory:AbstractFactory) {
+    constructor(petFactory:AbstractFactory) {
         this.petFactory = petFactory;
-        this.logger= new Logger();
+        this.logger = new Logger();
     }
 
     showPet() {
@@ -17,27 +15,32 @@ export class PetShop {
 }
 /* Stuff that our factory makes */
 
-export class Animal{
-    speak(): string {}
-    toString(): string {}
+export class Animal {
+    speak():string {
+        throw new Error("Abstract method!");
+    }
+
+    toString():string {
+        throw new Error("Abstract method!");
+    }
 }
 
-export class Dog extends Animal{
-    speak(): string {
+export class Dog extends Animal {
+    speak():string {
         return "woof";
     }
 
-    toString(): string {
+    toString():string {
         return "Dog";
     }
 }
 
-export class Cat extends Animal{
-    speak(): string {
+export class Cat extends Animal {
+    speak():string {
         return "meow";
     }
 
-    toString(): string {
+    toString():string {
         return "Cat";
     }
 }
@@ -45,24 +48,31 @@ export class Cat extends Animal{
 /* Factory classes */
 
 export class AbstractFactory {
-    getPet(): Animal {}
-    getFood(): string {}
+    getPet():Animal {
+        throw new Error("Abstract method!");
+    }
+
+    getFood():string {
+        throw new Error("Abstract method!");
+    }
 }
 
 export class DogFactory extends AbstractFactory {
-    getPet(): Animal {
+    getPet():Animal {
         return new Dog();
     }
-    getFood(): string {
+
+    getFood():string {
         return "dog food"
     }
 }
 
 export class CatFactory extends AbstractFactory {
-    getPet(): Animal {
+    getPet():Animal {
         return new Cat();
     }
-    getFood(): string {
+
+    getFood():string {
         return "cat food"
     }
 }

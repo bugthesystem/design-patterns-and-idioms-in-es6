@@ -27,6 +27,7 @@ export class DrawingAPI {
     }
 
     drawCircle(x:int, y:int, radius:float) {
+        throw new Error("Abstract method!");
     }
 }
 

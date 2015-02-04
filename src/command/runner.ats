@@ -1,0 +1,9 @@
+import {Receiver ,ConcreteCommand1 ,ConcreteCommand2 ,Invoker} from './command';
+
+var receiver = new Receiver();
+var command1 = new ConcreteCommand1(receiver);
+var command2 = new ConcreteCommand2(receiver);
+var invoker = new Invoker();
+
+invoker.storeAndExecute(command1);
+invoker.storeAndExecute(command2);
