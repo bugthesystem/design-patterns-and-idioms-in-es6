@@ -10,7 +10,7 @@ export class PetShop {
 
     showPet() {
         var pet = this.petFactory.getPet();
-        this.logger.log("We have a lovely " + pet.toStr());
+        this.logger.log("We have a lovely " + pet.toString());
         this.logger.log("It says " + pet.speak());
         this.logger.log("We also have " + this.petFactory.getFood());
     }
@@ -19,7 +19,7 @@ export class PetShop {
 
 export class Animal{
     speak(): string {}
-    toStr(): string {}
+    toString(): string {}
 }
 
 export class Dog extends Animal{
@@ -27,8 +27,18 @@ export class Dog extends Animal{
         return "woof";
     }
 
-    toStr(): string {
+    toString(): string {
         return "Dog";
+    }
+}
+
+export class Cat extends Animal{
+    speak(): string {
+        return "meow";
+    }
+
+    toString(): string {
+        return "Cat";
     }
 }
 
