@@ -4,6 +4,7 @@ export class Dog {
     constructor() {
         this.name = "Dog";
     }
+
     bark(): string {
         return "woof!";
     }
@@ -11,8 +12,9 @@ export class Dog {
 
 export class Cat {
     constructor() {
-        self.name = "Cat"
+        this.name = "Cat"
     }
+
     meow(): string {
         return "meow!";
     }
@@ -22,6 +24,7 @@ export class Human {
     constructor() {
         this.name = "Human";
     }
+
     speak(): string {
         return "'hello'";
     }
@@ -31,6 +34,7 @@ export class Car {
     constructor() {
         this.name = "Car";
     }
+
     makeNoise(octaneLevel): string {
         return "vroom " + octaneLevel;
     }

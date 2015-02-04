@@ -32,7 +32,7 @@ Current Patterns
 | [adapter](src/adapter/adapter.ats) | adapt one interface to another using a whitelist |
 | 3-tier | data<->business logic<->presentation separation (strict relationships) |
 | borg | a singleton with shared-state among instances |
-| bridge | a client-provider middleman to soften interface changes |
+| [bridge](src/bridge/bridge.ats) | a client-provider middleman to soften interface changes |
 | builder | call many little discrete methods rather than having a huge number of constructor parameters |
 | catalog | general methods will call different specialized methods based on construction parameter |
 | chain | apply a chain of successive handlers to try and process the data |

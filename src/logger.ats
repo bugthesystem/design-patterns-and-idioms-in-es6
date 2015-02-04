@@ -1,5 +1,4 @@
 export class Logger {
-
     constructor() {
         this.container = document.getElementById("logContainer");
     }
