@@ -1,7 +1,7 @@
 # design-patterns-in-atscript
 Design pattern implementations in AtScript
 
-** Boilerplate forked from  [angular/atscript-playground](https://github.com/angular/atscript-playground)**
+**Boilerplate forked from  [angular/atscript-playground](https://github.com/angular/atscript-playground)**
 
 ### Initial setup
 
