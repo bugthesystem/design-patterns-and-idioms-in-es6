@@ -1,0 +1,53 @@
+export class PetShop {
+    petFactory: AnimalFactory;
+
+    constructor(animalFactory: AnimalFactory) {
+        this.petFactory = animalFactory;
+    }
+    showPet(): void {
+        pet = this.petFactory.getPet()
+        console.log("We have a lovely " + pet.toStr())
+        console.log("It says " + pet.speak())
+        console.log("We also have " + this.petFactory.getFood())
+    }
+}
+/* Stuff that our factory makes */
+export class Dog {
+    speak(): string {
+        return "woof";
+    }
+
+    toStr(): string {
+        return "Dog";
+    }
+}
+
+export class Cat {
+    speak(): string {
+        return "meow";
+    }
+
+    toStr(): string {
+        return "Cat";
+    }
+}
+
+
+/* Factory classes */
+export class DogFactory {
+    def gePet(): any {
+        return new Dog();
+    }
+    getFood(): string {
+        return "dog food"
+    }
+}
+
+export class CatFactory {
+    def gePet(): any {
+        return new Cat();
+    }
+    getFood(): string {
+        return "cat food"
+    }
+}
