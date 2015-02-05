@@ -39,7 +39,7 @@ Current Patterns
 | [command](src/command/command.ats) | bundle a command and arguments to call later |
 | composite | encapsulate and provide access to a number of different objects |
 | decorator | wrap functionality with other functionality in order to affect outputs |
-| facade | use one class as an API to a number of others |
+| [facade](src/facade/facade.ats) | use one class as an API to a number of others |
 | factory_method | delegate a specialized function/method to create instances |
 | flyweight | transparently reuse existing instances of objects with similar/identical state |
 | graph_search | (graphing algorithms, not design patterns) |
