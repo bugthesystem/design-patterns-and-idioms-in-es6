@@ -1,0 +1,9 @@
+import {Circle,Rectangle,RedShapeDecorator} from './decorator';
+
+var circle = new Circle();
+var redCircle = new RedShapeDecorator(new Circle());
+var redRectangle = new RedShapeDecorator(new Rectangle());
+
+circle.draw();
+redCircle.draw();
+redRectangle.draw();
