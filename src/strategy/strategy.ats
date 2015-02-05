@@ -5,6 +5,7 @@ import { int, float } from '../lang';
 export class Strategy {
     constructor() {
         this.logger = new Logger();
+
     }
 
     doOperation(num1:int, num2:int) {
@@ -12,36 +13,31 @@ export class Strategy {
     }
 }
 export class Context {
-    stragety:Strategy;
-
-    constructor(stragety:Strategy) {
-        this.stragety = stragety;
+    constructor(strategy:Strategy) {
+        this.strategy = strategy;
     }
 
     executeStrategy(num1:int, num2:int) {
-        return this.stragety.doOperation(num1, num2);
+        return this.strategy.doOperation(num1, num2);
     }
 
 }
 export class OperationAdd extends Strategy {
     doOperation(num1:int, num2:int) {
-        this.logger.log('add of operation' + x + y);
+        this.logger.log("add of operation" + ':' + (num1 + num2).toString());
 
     }
 }
 
-
 export class OperationSubstract extends Strategy {
     doOperation(num1:int, num2:int) {
-        this.logger.log('sub of operation' + x - y);
-
+        this.logger.log('sub of operation' + ':' + (num1 - num2).toString());
     }
 }
 
 export class OperationMultiply extends Strategy {
     doOperation(num1:int, num2:int) {
-        this.logger.log('multiply of operation' + x * y);
-
+        this.logger.log('multiply of operation' + ':' + (num1 * num2).toString());
     }
 }
 

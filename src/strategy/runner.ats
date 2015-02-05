@@ -1,6 +1,13 @@
-import {Strategy, Context, OperationAdd,OperationSubstract,OperationMultiply} from './strategy.ats';
+import {Strategy, Context, OperationAdd,OperationSubstract,OperationMultiply} from './strategy';
 
-var operations = [
-var context = new Context(new OperationAdd)
-context.executeStrategy(1,2)
-];
+
+
+var contextAdd = new Context(new OperationAdd());
+var contextSub = new Context(new OperationSubstract());
+var contextMultiply = new Context(new OperationMultiply());
+
+contextAdd.executeStrategy(1,10);
+contextSub.executeStrategy(12,5);
+contextMultiply.executeStrategy(5,10);
+
+
