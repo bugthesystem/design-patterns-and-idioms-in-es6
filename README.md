@@ -33,7 +33,7 @@ Current Patterns
 | 3-tier | data<->business logic<->presentation separation (strict relationships) |
 | borg | a singleton with shared-state among instances |
 | [bridge](src/bridge/bridge.ats) | a client-provider middleman to soften interface changes |
-| builder | call many little discrete methods rather than having a huge number of constructor parameters |
+| [builder](src/builder/builder.ats) | call many little discrete methods rather than having a huge number of constructor parameters |
 | catalog | general methods will call different specialized methods based on construction parameter |
 | chain | apply a chain of successive handlers to try and process the data |
 | [command](src/command/command.ats) | bundle a command and arguments to call later |

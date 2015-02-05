@@ -1,0 +1,17 @@
+import {Director, Builder, HouseBuilder, FlatBuilder, Building} from './builder'
+import { Logger } from '../logger';
+
+var logger = new Logger();
+
+var director = new Director();
+
+director.construct(new HouseBuilder());
+director.constructBuilding();
+var building1 = director.getBuilding()
+logger.log(building1.toString());
+
+
+director.construct(new FlatBuilder());
+director.constructBuilding();
+var building2 = director.getBuilding()
+logger.log(building2.toString());
