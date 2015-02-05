@@ -46,7 +46,7 @@ Current Patterns
 | mediator | an object that knows how to connect other objects and act as a proxy |
 | memento | generate an opaque token that can be used to go back to a previous state |
 | mvc | model<->view<->controller (non-strict relationships) |
-| observer | provide a callback for notification of events/changes to data |
+| [observer](src/observer/observer.ats) | provide a callback for notification of events/changes to data |
 | pool | preinstantiate and maintain a group of instances of the same type |
 | prototype | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
 | proxy | an object funnels operations to something else |

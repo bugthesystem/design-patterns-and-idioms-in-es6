@@ -4,7 +4,6 @@ int.assert = function (value) {
     return value == null || typeof value == 'number' && value === Math.floor(value);
 };
 
-//TODO:
 export function float() {
 };
 float.assert = function (value) {
