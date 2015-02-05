@@ -48,7 +48,7 @@ Current Patterns
 | mvc | model<->view<->controller (non-strict relationships) |
 | [observer](src/observer/observer.ats) | provide a callback for notification of events/changes to data |
 | pool | preinstantiate and maintain a group of instances of the same type |
-| prototype | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
+| [prototype](src/prototype/prototype.ats) | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
 | proxy | an object funnels operations to something else |
 | [publish_subscribe](src/publish_subscribe/pubsub.ats) | a source syndicates events/data to 0+ registered listeners |
 | state | logic is org'd into a discrete number of potential states and the next state that can be transitioned to |

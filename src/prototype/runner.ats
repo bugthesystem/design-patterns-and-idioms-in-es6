@@ -1,0 +1,15 @@
+import {Prototype, Person, Dog} from './prototype';
+
+
+var person1 = new Person("Fred");
+
+var person2 = person1.doClone();
+person1.toString();
+person2.toString();
+
+
+var dog1 = new Dog("Wooof!");
+dog1.toString();
+
+var dog2 = dog1.doClone();
+dog2.toString();
