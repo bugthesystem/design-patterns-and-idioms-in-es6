@@ -1,0 +1,45 @@
+import { Logger } from '../logger';
+import { int, float } from '../lang';
+
+
+export class Prototype {
+
+    doClone():Prototype {
+        throw new Error("Abstract method!");
+    }
+
+}
+
+export class Person extends Prototype {
+
+    constructor(surname:string) {
+        this.surname = surname;
+    }
+
+    doClone():Prototype {
+
+        return new Person(this.surname);
+    }
+
+    toString():string {
+        return this.surname
+    }
+}
+
+
+export class Dog extends Prototype {
+
+    constructor(sound:string) {
+        this.sound = sound;
+    }
+
+    doClone():Prototype {
+
+        return new Dog(this.sound);
+    }
+
+    toString():string {
+        return this.surname
+    }
+}
+

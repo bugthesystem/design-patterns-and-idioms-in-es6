@@ -1,0 +1,5 @@
+import {Prototype, Person, Dog} from './prototype';
+
+
+var person = new Person("Fred");
+console.log("person 1:" + person);
