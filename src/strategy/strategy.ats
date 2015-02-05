@@ -1,0 +1,47 @@
+import { Logger } from '../logger';
+import { int, float } from '../lang';
+
+
+export class Strategy {
+    constructor() {
+        this.logger = new Logger();
+    }
+
+    doOperation(num1:int, num2:int) {
+        throw new Error("Abstract method!");
+    }
+}
+export class Context {
+    stragety:Strategy;
+
+    constructor(stragety:Strategy) {
+        this.stragety = stragety;
+    }
+
+    executeStrategy(num1:int, num2:int) {
+        return this.stragety.doOperation(num1, num2);
+    }
+
+}
+export class OperationAdd extends Strategy {
+    doOperation(num1:int, num2:int) {
+        this.logger.log('add of operation' + x + y);
+
+    }
+}
+
+
+export class OperationSubstract extends Strategy {
+    doOperation(num1:int, num2:int) {
+        this.logger.log('sub of operation' + x - y);
+
+    }
+}
+
+export class OperationMultiply extends Strategy {
+    doOperation(num1:int, num2:int) {
+        this.logger.log('multiply of operation' + x * y);
+
+    }
+}
+
