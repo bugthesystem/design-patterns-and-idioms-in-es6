@@ -1,0 +1,26 @@
+import {Provider ,Subscriber,Publisher} from './pubsub';
+
+
+var messageCenter = new Provider();
+
+var fftv = new Publisher(messageCenter);
+
+var aaron = new Subscriber("aaron", messageCenter);
+aaron.subscribe("reddit");
+
+var aamir = new Subscriber("aamir", messageCenter);
+aamir.subscribe("movie");
+
+var gee = new Subscriber("turing", messageCenter);
+gee.subscribe("science");
+
+fftv.publish("reddit");
+fftv.publish("science");
+fftv.publish("ads");
+fftv.publish("movie");
+fftv.publish("reddit");
+fftv.publish("reddit");
+fftv.publish("science");
+fftv.publish("blank");
+
+messageCenter.update();

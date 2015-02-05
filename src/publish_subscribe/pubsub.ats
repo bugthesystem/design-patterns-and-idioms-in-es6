@@ -1,0 +1,67 @@
+import { Logger } from '../logger';
+
+export class Provider {
+    constructor() {
+        this.msgQueue = []
+        this.subscribers = {}
+    }
+
+    notify(msg:string) {
+        this.msgQueue.push(msg)
+    }
+
+    subscribe(msg:string, subscriber:Subscriber) {
+        if (!(msg in this.subscribers)) {
+            this.subscribers[msg] = [];
+        }
+
+        this.subscribers[msg].push(subscriber);
+    }
+
+    unsubscribe(msg:string, subscriber:Subscriber) {
+        var subscribers = this.subscribers[msg];
+        var index = subscribers.indexOf(subscriber);
+        if (index > -1) {
+            subscribers.splice(index, 1);
+        }
+    }
+
+    update() {
+        var _that = this;
+        this.msgQueue.forEach(msg=> {
+            if (msg in this.subscribers) {
+                _that.subscribers[msg].forEach(sub=> {
+                    sub.run(msg)
+                });
+            }
+        });
+
+        this.msgQueue = []
+    }
+}
+
+export class Publisher {
+    constructor(msgCenter:Provider) {
+        this.provider = msgCenter;
+    }
+
+    publish(msg:string) {
+        this.provider.notify(msg)
+    }
+}
+
+export class Subscriber {
+    constructor(name:string, msgCenter:Provider) {
+        this.name = name;
+        this.provider = msgCenter;
+        this.logger = new Logger();
+    }
+
+    subscribe(msg:string) {
+        this.provider.subscribe(msg, this);
+    }
+
+    run(msg:string) {
+        this.logger.log(this.name + " & " + msg);
+    }
+}
