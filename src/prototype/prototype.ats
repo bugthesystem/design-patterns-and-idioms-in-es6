@@ -1,10 +1,14 @@
 import { Logger } from '../logger';
 import { int, float } from '../lang';
 
-
 export class Prototype {
 
+    constructor(){
+
+    }
+
     doClone():Prototype {
+
         throw new Error("Abstract method!");
     }
 
@@ -13,6 +17,8 @@ export class Prototype {
 export class Person extends Prototype {
 
     constructor(surname:string) {
+        this.logger = new Logger();
+
         this.surname = surname;
     }
 
@@ -21,8 +27,9 @@ export class Person extends Prototype {
         return new Person(this.surname);
     }
 
-    toString():string {
-        return this.surname
+    toString() {
+
+        return this.logger.log("This person is named " + this.surname);
     }
 }
 
@@ -30,6 +37,8 @@ export class Person extends Prototype {
 export class Dog extends Prototype {
 
     constructor(sound:string) {
+        this.logger = new Logger();
+
         this.sound = sound;
     }
 
@@ -38,8 +47,9 @@ export class Dog extends Prototype {
         return new Dog(this.sound);
     }
 
-    toString():string {
-        return this.surname
+    toString() {
+
+        return this.logger.log("This dog says " + this.sound);
     }
 }
 
