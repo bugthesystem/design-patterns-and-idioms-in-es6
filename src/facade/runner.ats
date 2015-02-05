@@ -1,0 +1,4 @@
+import {ComputerFacade} from './facade';
+
+var computerFacade = new ComputerFacade();
+computerFacade.buildComputer();
