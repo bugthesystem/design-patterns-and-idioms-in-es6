@@ -21,7 +21,7 @@ npm install -g karma-cli gulp
 # Do initial build, start a webserver and re-build on every file change...
 gulp build serve watch
 ```
-Open a browser and look in the console log to see the result.
+Open a browser and see the result.
 
 Current Patterns
 ======================
