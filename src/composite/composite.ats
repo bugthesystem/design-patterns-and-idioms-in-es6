@@ -3,19 +3,15 @@ import { int, float } from '../lang';
 
 
 export class Employee {
-
-
     constructor(name:string, dept:string, sal:int) {
         this.subordinates = [];
         this.name = name;
         this.dept = dept;
         this.sal = sal;
     }
-
     add(e:Employee) {
         this.subordinates.push(e);
     }
-
     remove(e:Employee) {
 
         var index = this.subordinates.indexOf(e);

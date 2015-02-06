@@ -1,7 +1,7 @@
 import {Employee} from './composite';
 import { Logger } from '../logger';
 
-this.logger = new Logger();
+var logger = new Logger();
 var ceo = new Employee("John", "CEO", 30000);
 var headSales = new Employee("Robert", "Head Sales", 20000);
 
@@ -23,8 +23,12 @@ headMarketing.add(clerk1);
 headMarketing.add(clerk2);
 
 
-this.logger.log(JSON.stringify(ceo));
-this.logger.log(JSON.stringify(headSales));
+logger.log(JSON.stringify(ceo));
+logger.log(JSON.stringify(headSales));
 
 //Refactor code. For loop
+
+ceo.subordinates.forEach(_ceo=> {
+    logger.log(JSON.stringify(_ceo));
+});
 
