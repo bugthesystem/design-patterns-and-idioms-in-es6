@@ -54,7 +54,7 @@ Current Patterns
 | state | logic is org'd into a discrete number of potential states and the next state that can be transitioned to |
 | [strategy](src/strategy/strategy.ats) | selectable operations over the same data |
 | [template](src/template/template.ats) | an object imposes a structure but takes pluggable components |
-| visitor| invoke a callback for all items of a collection |
+| [visitor](src/visitor/visitor.ats)| invoke a callback for all items of a collection |
 | chaining_method | continue callback next object method |
 
 
