@@ -40,7 +40,7 @@ Current Patterns
 | composite | encapsulate and provide access to a number of different objects |
 | [decorator](src/decorator/decorator.ats) | wrap functionality with other functionality in order to affect outputs |
 | [facade](src/facade/facade.ats) | use one class as an API to a number of others |
-| factory_method | delegate a specialized function/method to create instances |
+| [factory_method](src/factory_method/factorymethod.ats) | delegate a specialized function/method to create instances |
 | flyweight | transparently reuse existing instances of objects with similar/identical state |
 | graph_search | (graphing algorithms, not design patterns) |
 | mediator | an object that knows how to connect other objects and act as a proxy |
