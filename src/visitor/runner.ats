@@ -1,0 +1,5 @@
+import {ComputerPart,Computer,ComputerPartVisitor,ComputerPartDisplayVisitor,Mouse,Keyboard,Monitor} from './visitor';
+
+
+var computerPart = new Computer();
+computerPart.accept(new ComputerPartDisplayVisitor());
