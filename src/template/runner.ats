@@ -1,0 +1,11 @@
+import {HouseTemplate,WoodenHouse,GlassHouse} from './template';
+
+var glassHouse = new GlassHouse();
+
+glassHouse.buildHouse();
+
+var woodenHouse = new WoodenHouse();
+woodenHouse.buildHouse();
+
+
+

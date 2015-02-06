@@ -53,7 +53,7 @@ Current Patterns
 | [publish_subscribe](src/publish_subscribe/pubsub.ats) | a source syndicates events/data to 0+ registered listeners |
 | state | logic is org'd into a discrete number of potential states and the next state that can be transitioned to |
 | [strategy](src/strategy/strategy.ats) | selectable operations over the same data |
-| template | an object imposes a structure but takes pluggable components |
+| [template](src/template/template.ats) | an object imposes a structure but takes pluggable components |
 | visitor| invoke a callback for all items of a collection |
 | chaining_method | continue callback next object method |
 
