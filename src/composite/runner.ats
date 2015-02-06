@@ -1,0 +1,30 @@
+import {Employee} from './composite';
+import { Logger } from '../logger';
+
+this.logger = new Logger();
+var ceo = new Employee("John", "CEO", 30000);
+var headSales = new Employee("Robert", "Head Sales", 20000);
+
+var headMarketing = new Employee("Michel", "Head Marketing", 20000);
+
+var clerk1 = new Employee("Laura", "Marketing", 10000);
+var clerk2 = new Employee("Bob", "Marketing", 10000);
+
+var salesExecutive1 = new Employee("Richard", "Sales", 10000);
+var salesExecutive2 = new Employee("Rob", "Sales", 10000);
+
+
+ceo.add(headSales);
+ceo.add(headMarketing);
+headSales.add(salesExecutive1);
+headSales.add(salesExecutive2);
+
+headMarketing.add(clerk1);
+headMarketing.add(clerk2);
+
+
+this.logger.log(JSON.stringify(ceo));
+this.logger.log(JSON.stringify(headSales));
+
+//Refactor code. For loop
+
