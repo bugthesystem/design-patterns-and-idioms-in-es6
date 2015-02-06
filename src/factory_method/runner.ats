@@ -1,0 +1,21 @@
+import {ShapeFactory,Circle,Rectangle,Square} from './factorymethod';
+
+var shapeFactory = new ShapeFactory();
+
+//get an object of Circle and call its draw method.
+var circleShape = shapeFactory.getShape("CIRCLE");
+
+//call draw method of Circle
+circleShape.draw();
+
+//get an object of Rectangle and call its draw method.
+var rectangleShape = shapeFactory.getShape("RECTANGLE");
+
+//call draw method of Rectangle
+rectangleShape.draw();
+
+//get an object of Square and call its draw method.
+var squareShape = shapeFactory.getShape("SQUARE");
+
+//call draw method of circle
+squareShape.draw();
