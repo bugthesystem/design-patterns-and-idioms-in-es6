@@ -1,3 +1,3 @@
-##Strategy Pattern##
+##Proxy Pattern##
 
-Creates objects which represent various strategies and a context object whose behavior varies as per its strategy object.
+Provide a surrogate or placeholder for another object to control access to it.

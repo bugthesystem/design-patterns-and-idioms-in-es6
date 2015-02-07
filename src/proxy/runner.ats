@@ -1,13 +1,10 @@
-import {Strategy, Context, OperationAdd,OperationSubstract,OperationMultiply} from './strategy';
+import {ProxyDriving} from './proxy';
 
-
-
-var contextAdd = new Context(new OperationAdd());
-var contextSub = new Context(new OperationSubstract());
-var contextMultiply = new Context(new OperationMultiply());
-
-contextAdd.executeStrategy(1,10);
-contextSub.executeStrategy(12,5);
-contextMultiply.executeStrategy(5,10);
+var proxy = new ProxyDriving();
+proxy.startEngine();
+proxy.hitGas();
+proxy.hitBrake();
+proxy.parkCark();
+proxy.stopEngine();
 
 
