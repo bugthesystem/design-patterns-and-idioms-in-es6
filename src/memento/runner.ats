@@ -1,0 +1,18 @@
+import {Originator,CareTaker} from './memento';
+import { Logger } from '../logger';
+
+var originator = new Originator();
+var careTaker = new CareTaker();
+var logger = new Logger();
+originator.setState("State #1");
+originator.setState("State #2");
+careTaker.addStateToMementoList(originator.saveStateToMemento());
+
+originator.setState("State #3");
+careTaker.addStateToMementoList(originator.saveStateToMemento());
+originator.setState("State #4");
+logger.log("Current state is: " + originator.getState());
+originator.getStateFromMemento(careTaker.getStateFromMementoList(0));
+logger.log("First saved state is: " + originator.getState());
+originator.getStateFromMemento(careTaker.getStateFromMementoList(1));
+logger.log("Second saved state is: " + originator.getState());
