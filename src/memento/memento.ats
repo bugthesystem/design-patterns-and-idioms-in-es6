@@ -6,19 +6,19 @@ export class Originator {
         this.logger = new Logger();
     }
 
-    setState(_state:string) {
+    set State(_state:string) {
         this.state = _state;
     }
 
-    getState():string {
+    get State():string {
         return this.state;
     }
 
-    getStateFromMemento(memento:Memento) {
-        this.state = memento.getMementoState();
+    set stateFromMemento(memento:Memento) {
+        this.state = memento.MementoState;
     }
 
-    saveStateToMemento():Memento {
+    get stateToBeSavedMemento():Memento {
         return (new Memento(this.state));
     }
 
@@ -28,7 +28,7 @@ export class Memento {
         this.mementoState = _state;
     }
 
-    getMementoState():string {
+    get MementoState():string {
         return this.mementoState;
     }
 
