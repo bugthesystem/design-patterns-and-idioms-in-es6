@@ -44,7 +44,7 @@ Current Patterns
 | flyweight | transparently reuse existing instances of objects with similar/identical state |
 | graph_search | (graphing algorithms, not design patterns) |
 | mediator | an object that knows how to connect other objects and act as a proxy |
-| memento | generate an opaque token that can be used to go back to a previous state |
+| [memento](src/memento/memento.ats) | generate an opaque token that can be used to go back to a previous state |
 | mvc | model<->view<->controller (non-strict relationships) |
 | [observer](src/observer/observer.ats) | provide a callback for notification of events/changes to data |
 | pool | preinstantiate and maintain a group of instances of the same type |

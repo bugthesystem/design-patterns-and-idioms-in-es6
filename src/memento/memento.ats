@@ -1,0 +1,48 @@
+import { Logger } from '../logger';
+import { int, float } from '../lang';
+
+export class Originator {
+    constructor() {
+        this.logger = new Logger();
+    }
+
+    set State(_state:string) {
+        this.state = _state;
+    }
+
+    get State():string {
+        return this.state;
+    }
+
+    set stateFromMemento(memento:Memento) {
+        this.state = memento.MementoState;
+    }
+
+    get stateToBeSavedMemento():Memento {
+        return (new Memento(this.state));
+    }
+
+}
+export class Memento {
+    constructor(_state:string) {
+        this.mementoState = _state;
+    }
+
+    get MementoState():string {
+        return this.mementoState;
+    }
+
+}
+export class CareTaker {
+    constructor() {
+        this.mementoList = [];
+    }
+
+    addStateToMementoList(_state:Memento) {
+        this.mementoList.push(_state);
+    }
+
+    getStateFromMementoList(index:int):Memento {
+        return this.mementoList[index];
+    }
+}
