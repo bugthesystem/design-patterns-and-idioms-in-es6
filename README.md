@@ -56,6 +56,7 @@ Current Patterns
 | [template](src/template/template.ats) | an object imposes a structure but takes pluggable components |
 | [visitor](src/visitor/visitor.ats)| invoke a callback for all items of a collection |
 | chaining_method | continue callback next object method |
+| [iterator](src/iterator/iterator.ats) | Provide a way to access the elements of an aggregate object sequentially |
 
 
 ### What are all the pieces involved?
