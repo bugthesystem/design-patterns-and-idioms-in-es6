@@ -27,7 +27,7 @@ export class Person extends Prototype {
         return new Person(this.surname);
     }
 
-    toString() {
+    toString():string{
 
         return this.logger.log("This person is named " + this.surname);
     }
@@ -47,7 +47,7 @@ export class Dog extends Prototype {
         return new Dog(this.sound);
     }
 
-    toString() {
+    toString():string {
 
         return this.logger.log("This dog says " + this.sound);
     }
