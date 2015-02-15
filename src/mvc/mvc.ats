@@ -1,0 +1,62 @@
+import { Logger } from '../logger';
+
+export class Student {
+    rollNo:string;
+    studentName:string;
+
+    get  Number():string {
+        return rollNo;
+    }
+
+    get  Name():string {
+        return studentName;
+    }
+
+    set Name(name:string) {
+        studentName = name;
+    }
+
+    set Number(number:string) {
+        rollNo = number;
+    }
+}
+export class StudentView {
+    constructor() {
+        this.logger = Logger();
+    }
+
+    printStudentDetails(name:string, number:string) {
+        this.logger.log("Student:");
+        this.logger.log("Name:" + name);
+        this.logger.log("Roll no:" + number);
+    }
+}
+export class StudentController {
+    studentModel:Student;
+    studentView:StudentView;
+
+    constructor(model:Student, view:StudentView) {
+        studentModel = model;
+        studentView = view;
+    }
+
+    get StudentName():string {
+        return studentModel.Name;
+    }
+
+    get StudentNumber():string {
+        return studentModel.Number;
+    }
+
+    set StudentName(name:string) {
+        studentModel.name = name;
+    }
+
+    set StudentNumber(number:string) {
+        studentModel.Number = number;
+    }
+    updateView(){
+        studentView.printStudentDetails(studentModel.Name, studentModel.Number);
+    }
+
+}

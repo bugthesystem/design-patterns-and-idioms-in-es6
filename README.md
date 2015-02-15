@@ -45,7 +45,7 @@ Current Patterns
 | graph_search | (graphing algorithms, not design patterns) |
 | mediator | an object that knows how to connect other objects and act as a proxy |
 | [memento](src/memento/memento.ats) | generate an opaque token that can be used to go back to a previous state |
-| mvc | model<->view<->controller (non-strict relationships) |
+| [mvc](src/mvc/mvc.ats) | model<->view<->controller (non-strict relationships) |
 | [observer](src/observer/observer.ats) | provide a callback for notification of events/changes to data |
 | pool | preinstantiate and maintain a group of instances of the same type |
 | [prototype](src/prototype/prototype.ats) | use a factory and clones of a prototype for new instances (if instantiation is expensive) |

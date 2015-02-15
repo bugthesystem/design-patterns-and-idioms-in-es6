@@ -1,0 +1,17 @@
+import {Student,StudentController,StudentView} from './mvc'
+
+//first student
+model = new Student();
+model.Name = "Robert";
+model.Number = "10";
+
+//Create a view : to write student details on console
+view = new StudentView();
+
+controller = new StudentController(model,view);
+controller.updateView();
+
+//update model data
+controller.StudentName = "John";
+
+controller.updateView();
