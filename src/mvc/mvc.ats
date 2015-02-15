@@ -1,28 +1,25 @@
 import { Logger } from '../logger';
 
 export class Student {
-    rollNo:string;
-    studentName:string;
-
     get  Number():string {
-        return rollNo;
+        return this.rollNo;
     }
 
     get  Name():string {
-        return studentName;
+        return this.studentName;
     }
 
     set Name(name:string) {
-        studentName = name;
+        this.studentName = name;
     }
 
     set Number(number:string) {
-        rollNo = number;
+        this.rollNo = number;
     }
 }
 export class StudentView {
     constructor() {
-        this.logger = Logger();
+        this.logger = new Logger();
     }
 
     printStudentDetails(name:string, number:string) {
@@ -32,31 +29,37 @@ export class StudentView {
     }
 }
 export class StudentController {
-    studentModel:Student;
-    studentView:StudentView;
-
     constructor(model:Student, view:StudentView) {
-        studentModel = model;
-        studentView = view;
+        this.studentModel = model;
+        this.studentView = view;
     }
 
     get StudentName():string {
-        return studentModel.Name;
+        return this.studentModel.Name;
     }
 
     get StudentNumber():string {
-        return studentModel.Number;
+        return this.studentModel.Number;
     }
 
     set StudentName(name:string) {
-        studentModel.name = name;
+        this.studentModel.Name = name;
     }
 
     set StudentNumber(number:string) {
-        studentModel.Number = number;
-    }
-    updateView(){
-        studentView.printStudentDetails(studentModel.Name, studentModel.Number);
+        this.studentModel.Number = number;
     }
 
+    updateView() {
+        this.studentView.printStudentDetails(this.studentModel.Name, this.studentModel.Number);
+    }
+
+}
+export class DBManager{
+    retriveStudentFromDatabase():Student{
+        var student = new Student();
+        student.Name = "Robert";
+        student.Number = "10";
+        return student;
+    }
 }
