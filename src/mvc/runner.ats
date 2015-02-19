@@ -1,0 +1,17 @@
+import {Student,StudentController,StudentView,DBManager} from './mvc'
+
+//fetch student record based on his roll no from the database
+var db = new DBManager();
+var model = db.retriveStudentFromDatabase();
+
+//Create a view : to write student details on console
+var view = new StudentView();
+
+var controller = new StudentController(model, view);
+controller.updateView();
+
+//update model data
+controller.StudentName = "John";
+controller.StudentNumber = "15";
+
+controller.updateView();
