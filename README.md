@@ -1,5 +1,5 @@
-# Design Patterns and Idioms in AtScript
-A collection of design patterns and idioms in AtScript
+# Design Patterns and Idioms in ES6
+A collection of design patterns and idioms in ES6
 
 **Boilerplate forked from  [angular/atscript-playground](https://github.com/angular/atscript-playground)**
 
@@ -7,8 +7,8 @@ A collection of design patterns and idioms in AtScript
 
 ```bash
 # Clone the repo...
-git clone https://github.com/ziyasal/design-patterns-in-atscript.git
-cd design-patterns-in-atscript
+git clone https://github.com/ziyasal/design-patterns-in-es6.git
+cd design-patterns-in-es6
 
 # Then, you need to install all the dependencies...
 npm install
