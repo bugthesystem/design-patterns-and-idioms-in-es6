@@ -1,4 +1,12 @@
-import {ComputerPart,Computer,ComputerPartVisitor,ComputerPartDisplayVisitor,Mouse,Keyboard,Monitor} from './visitor';
+import {
+          ComputerPart,
+          Computer,
+          ComputerPartVisitor,
+          ComputerPartDisplayVisitor,
+          Mouse,
+          Keyboard,
+          Monitor
+        } from './visitor';
 
 
 var computerPart = new Computer();
